@@ -54,6 +54,7 @@ translate_word_entry.pack(pady=10)
 translate_button = ttk.Button(root, text="Translate", command=translate)
 translate_button.pack(pady=10)
 
-
+output_label = ttk.Label(root,textvariable=output, font=("Helvetica", 16), foreground="green")
+output_label.pack()
 
 root.mainloop()

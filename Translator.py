@@ -24,14 +24,15 @@ def translate():
     to_lang_code = get_language_code(to_lang_name)
 
     if from_lang_code is None or to_lang_code is None:
-        print("Invalid language")
+        invalid="Invalid language name. Please enter a valid language name."
+        output.set(invalid)
         exit()
 
     
     translator = Translator(from_lang=from_lang_code, to_lang=to_lang_code)
     translation = translator.translate(word_to_translate)
     print(translation)
-    output.set(translation)
+    output.set(translation.capitalize())
 
 from_lang_label = ttk.Label(root, text="Enter the language you want to translate from:", font=("Helvetica", 16), foreground="green")
 from_lang_label.pack()

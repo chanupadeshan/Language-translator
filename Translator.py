@@ -1,6 +1,12 @@
 
 from translate import Translator
 from language_code import language_codes
+import tkinter as tk
+from tkinter import ttk
+
+root = tk.Tk()
+root.geometry("500x500")
+root.title("Translator")
 
 def get_language_code(language_name):
     return language_codes.get(language_name.lower())
@@ -18,5 +24,5 @@ else:
     translation = translator.translate(translate_word)
     print(translation)  
 
-
+root.mainloop()
 

@@ -36,6 +36,9 @@ translate_word_entry = ttk.Entry(root,textvariable=translate_word,width=50)
 translate_word_entry.pack(pady=10)
 
 
+enter_button = ttk.Button(root,text="Tranlate")
+enter_button.pack(pady=10)
+
 # form_lang = input("Enter the language you want to translate from: ")
 # to_lang = input("Enter the language you want to translate to: ")
 

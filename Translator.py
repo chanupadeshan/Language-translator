@@ -9,6 +9,6 @@ def get_language_code(language_name):
 form_lang = 'english'
 to_lang = 'spanish'
 
-translator = Translator(from_lang='en',to_lang='es')
+translator = Translator(from_lang=get_language_code(form_lang),to_lang=get_language_code(to_lang))
 translation = translator.translate("Hello")
 print(translation)  # Output: Hola

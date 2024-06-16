@@ -6,9 +6,17 @@ def get_language_code(language_name):
     return language_codes.get(language_name.lower())
 
 
-form_lang = 'english'
-to_lang = 'spanish'
+form_lang = input("Enter the language you want to translate from: ")
+to_lang = input("Enter the language you want to translate to: ")
 
-translator = Translator(from_lang=get_language_code(form_lang),to_lang=get_language_code(to_lang))
-translation = translator.translate("Hello")
-print(translation)  # Output: Hola
+if form_lang not in language_codes.keys() & to_lang not in language_codes.key():
+    print("Invalid language")
+    exit()
+else:
+    translate_word = inoput("Enter the word you want to transalte:")
+    translator = Translator(from_lang=get_language_code(form_lang),to_lang=get_language_code(to_lang))
+    translation = translator.translate(translate_word)
+    print(translation)  
+
+
+

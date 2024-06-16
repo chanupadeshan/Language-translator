@@ -24,9 +24,10 @@ def translate():
     to_lang_code = get_language_code(to_lang_name)
 
     if from_lang_code is None or to_lang_code is None:
+        print("Invalid language name. Please enter a valid language name.")
         invalid="Invalid language name. Please enter a valid language name."
         output.set(invalid)
-        exit()
+        return
 
     
     translator = Translator(from_lang=from_lang_code, to_lang=to_lang_code)

@@ -25,8 +25,9 @@ def translate():
 
 # Create the main application window
 root = tk.Tk()
-root.geometry("600x400")
+root.geometry("600x300")
 root.title("Translator")
+root.resizable(False, False)
 
 # Custom style using ttkthemes
 style = ThemedStyle(root)

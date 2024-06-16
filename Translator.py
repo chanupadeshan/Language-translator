@@ -14,18 +14,27 @@ def get_language_code(language_name):
 
 from_lang = tk.StringVar()
 to_lang = tk.StringVar()
+translate_word = tk.StringVar()
 
 from_lang_label = ttk.Label(root,text="Enter the language you want to translate from: ",font=("Helvetica",16),foreground="green")
 from_lang_label.pack()
 
 from_lang_combobox = ttk.Combobox(root,values=list(language_codes.keys()),textvariable=from_lang)
-from_lang_combobox.pack()
+from_lang_combobox.pack(pady=10)
 
 to_lang_labal = ttk.Label(root,text="Enter the language you want to translate to: ",font=("Helvetica",16),foreground="green")
 to_lang_labal.pack()
 
 to_lang_combobox = ttk.Combobox(root,values=list(language_codes.keys()),textvariable=to_lang)
-to_lang_combobox.pack()
+to_lang_combobox.pack(pady=10)
+
+
+translate_word_label = ttk.Label(root,text="Enter the word you want to translate:",font=("Helvetica",16),foreground="green")
+translate_word_label.pack()
+
+translate_word_entry = ttk.Entry(root,textvariable=translate_word,width=50)
+translate_word_entry.pack(pady=10)
+
 
 # form_lang = input("Enter the language you want to translate from: ")
 # to_lang = input("Enter the language you want to translate to: ")

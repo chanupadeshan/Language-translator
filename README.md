@@ -58,7 +58,7 @@ A simple language translator application created using Python and Tkinter. This 
 
 ## Example `language_code.py`
 
-Here's an example `language_code.py` file:
+`language_code.py` file:
 
 ```python
 language_codes = {
